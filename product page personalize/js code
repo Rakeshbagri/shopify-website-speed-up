@@ -1,0 +1,60 @@
+
+<script> 
+
+  $(document).on('click', '.tabs-cls',function(e){
+  	$('.tabs-cls').removeClass('active');
+    $('.tabs-div').removeClass('show');
+  	$(this).addClass('active');
+    $id = $(this).data('id');
+    $($id).addClass('show');
+  }); 
+  
+  
+  $(document).on('click', '.for_icon',function(e){
+    if($('#check__box').is(":checked")){
+   		 		$('.icon_block').removeClass('hide-icon');
+    
+    $( "#check__box" ).prop( "checked", false ); 
+    }else{
+    		$('.icon_block').addClass('hide-icon');
+    
+    $( "#check__box" ).prop( "checked", true );
+    }
+  
+
+  
+  }); 
+  
+  
+  
+   $(document).on('click', '#line-2',function(e){
+  	$('#line_2').addClass('active');
+  	$('#line-1').removeClass('active');
+ 
+  	$(this).addClass('active');
+ 
+  }); 
+  
+  
+  
+    
+  
+   $(document).on('click', '#line-1',function(e){
+  	$('#line_2').removeClass('active');
+  	$('#line-2').removeClass('active');
+ 
+  	$(this).addClass('active');
+ 
+  }); 
+  
+$(document).on('click', '.pplrimage',function(e){
+ var vl = $(this).data('val');
+ $('.pplrimage').removeClass('active');
+ $(this).addClass('active');
+ $('input[name="properties[Icon]"]').val(vl);   
+});
+  
+  
+  
+  
+</script>  
